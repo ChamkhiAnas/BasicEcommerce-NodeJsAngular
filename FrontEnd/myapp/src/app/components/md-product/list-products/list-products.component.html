@@ -1,0 +1,32 @@
+<div class="row my-4">
+    <div class="col-md-6">
+        <h1>List of product</h1>
+    </div>
+    <div class="col-md-6"><a routerLink="/products/create" class="btn btn-sm btn-success"><i class="fa fa-plus"></i></a></div>
+</div>
+
+
+<div class="row my-3">
+    <div class="col-md-4 my-3" *ngFor=" let product of products">
+        <div class="card">
+            <img [src]="product.urlImage" alt="" class="card-img-top">
+            <div class="card-body">
+                <h4 class="card-title">{{product.title}}</h4>
+                <div class="card-text">
+
+                    <em>
+                    {{product.description}}
+                    </em> -->
+                    <div class="text-center">
+                        <a [routerLink]="['/products', product.id]" class="btn btn-sm btn-info">
+                            <i class="fa fa-eye"></i></a>
+                        <a [routerLink]="['/products', product.id ,'edit']" class="btn btn-sm btn-warning">
+                            <i class="fa fa-pencil"></i></a>
+                        <button class="btn btn-sm btn-danger"><i class="fa fa-trash"></i>
+                        </button>
+                    </div>
+
+                 </div>
+        </div>
+    </div>
+</div>

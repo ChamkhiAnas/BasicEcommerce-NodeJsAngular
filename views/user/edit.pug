@@ -1,0 +1,18 @@
+extends ../layout.pug
+block style
+    link(rel="stylesheet", href="/css/materia.min.css")
+block content
+    .row
+        .col-md-6.mx-auto
+            h1 Edit User
+            form(action="/users/"+user.id, method="POST")
+                div.form-group
+                    label(for="name") Name Of User
+                    input#title.form-control(name="name",placeholder="name",value=user.name)
+                    label(for="email") Email Of User
+                    input#title.form-control(name="email",placeholder="email",value=user.email)
+                    label(for="password") Password Of User
+                    input#title.form-control(name="password",type="password",placeholder="password",value=user.password)
+                button.btn.btn-primary.btn-block Edit User
+                   
+

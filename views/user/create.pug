@@ -1,0 +1,17 @@
+extends ../layout.pug
+block style
+    link(rel="stylesheet", href="/css/materia.min.css")
+block content
+    .row
+        .col-md-6.mx-auto
+            h1 Create User
+            form(action="/users", method="post")
+                div.form-group
+                    label(for="name") Name Of User
+                    input#title.form-control(name="name",placeholder="name")
+                    label(for="email") Email Of User
+                    input#title.form-control(name="email",placeholder="email")
+                    label(for="password") Password Of User
+                    input#title.form-control(name="password",type="password",placeholder="password")
+                button.btn.btn-primary.btn-block Create User
+                   
